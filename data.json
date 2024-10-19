@@ -29,7 +29,7 @@
             "artist": "Fleetwood Mac",
             "year": 1977,
             "genres": ["Rock", "Pop Rock"],
-            "cover": "https://e.snmc.io/i/600/w/b7d49832f4958688cd82b6dbb9f4dd31/12188855/the-beatles-abbey-road-Cover-Art.jpg",
+            "cover": "https://upload.wikimedia.org/wikipedia/en/f/fb/FMacRumours.PNG",
             "tracklist": ["Second Hand News", "Dreams", "Never Going Back Again", "Don't Stop", "Go Your Own Way", "Songbird", "The Chain", "You Make Loving Fun", "I Don't Want to Know", "Oh Daddy", "Gold Dust Woman"]
         },
         {
@@ -40,6 +40,14 @@
             "cover": "https://e.snmc.io/i/600/w/789aa0f3e0117c3c9f76107d70297626/12182517/steely-dan-aja-Cover-Art.jpg",
             "tracklist": ["Black Cow", "Aja", "Deacon Blues", "Peg", "Home at Last", "I Got the News", "Josie"]
         }, 
+        {
+            "name": "Lift Your Skinny Fists Like Antennas to Heaven",
+            "artist": "Godspeed You! Black Emperor",
+            "year": 2000,
+            "genres": ["Rock", "Post-Rock"],
+            "cover": "https://upload.wikimedia.org/wikipedia/en/d/d3/Liftyrskinnyfists.jpg",
+            "tracklist": ["Storm", "Static", "Sleep", "Like Antennas To Heaven..."]
+        },
         {
             "name": "Marquee Moon",
             "artist": "Television",
@@ -63,14 +71,6 @@
             "genres": ["Rock", "Indie Rock", "Garage Rock Revival"],
             "cover": "https://i.scdn.co/image/ab67616d0000b27313f2466b83507515291acce4",
             "tracklist": ["Is This It", "The Modern Age", "Soma", "Barely Legal", "Someday", "Alone, Together", "Last Nite", "Hard to Explain", "New York City Cops", "Trying Your Luck", "Take It or Leave it"]
-        },
-        {
-            "name": "Lift Your Skinny Fists Like Antennas to Heaven",
-            "artist": "Godspeed You! Black Emperor",
-            "year": 2000,
-            "genres": ["Rock", "Post-Rock"],
-            "cover": "https://e.snmc.io/i/600/w/6f600382625979469fb340eeb3c9ac8a/5662600/godspeed-you-black-emperor-lift-yr-skinny-fists-like-antennas-to-heaven-Cover-Art.jpg",
-            "tracklist": ["Storm", "Static", "Sleep", "Like Antennas To Heaven..."]
         },
         {
             "name": "Remain in Light",
