@@ -1,0 +1,84 @@
+{
+    "albums": [
+        {
+            "name": "Abbey Road",
+            "artist": "The Beatles",
+            "year": 1969,
+            "genres": ["Rock", "Pop", "Pop Rock"],
+            "cover": "https://e.snmc.io/i/600/w/b7d49832f4958688cd82b6dbb9f4dd31/12188855/the-beatles-abbey-road-Cover-Art.jpg",
+            "tracklist": ["Come Together", "Something", "Maxwell's Silver Hammer", "Oh! Darling", "Octopus's Garden", "I Want You (She's So Heavy)", "Here Comes the Sun", "Because", "You Never Give Me Your Money", "Sun King", "Mean Mr. Mustard", "Polythene Pam", "She Came In Through The Bathroom Window", "Golden Slumbers", "Carry That Weight", "The End", "Her Majesty"]
+        },
+        {
+            "name": "The Dark Side of the Moon",
+            "artist": "Pink Floyd",
+            "year": 1973,
+            "genres": ["Rock", "Progressive Rock"],
+            "cover": "https://e.snmc.io/i/600/w/b87ea178beaaaf0e0e4a39aaf9d1b834/12206378/pink-floyd-the-dark-side-of-the-moon-Cover-Art.jpg",
+            "tracklist": ["Speak To Me", "Breathe", "On the Run", "Time", "The Great Gig in the Sky", "Money", "Us and Them", "Any Colour You Like", "Brain Damage", "Eclipse"]
+        },
+        {
+            "name": "Wish You Were Here",
+            "artist": "Pink Floyd",
+            "year": 1975,
+            "genres": ["Rock", "Progressive Rock"],
+            "cover": "https://e.snmc.io/i/600/w/439b9503e9599050fda01d8eef4f8097/4184635/pink-floyd-wish-you-were-here-Cover-Art.png",
+            "tracklist": ["Shine On You Crazy Diamond (Parts I-V)", "Welcome to the Machine", "Have a Cigar", "Wish You Were Here", "Shine On You Crazy Diamond (Parts VI-IX)"]
+        },
+        {
+            "name": "Rumours",
+            "artist": "Fleetwood Mac",
+            "year": 1977,
+            "genres": ["Rock", "Pop Rock"],
+            "cover": "https://e.snmc.io/i/600/w/b7d49832f4958688cd82b6dbb9f4dd31/12188855/the-beatles-abbey-road-Cover-Art.jpg",
+            "tracklist": ["Second Hand News", "Dreams", "Never Going Back Again", "Don't Stop", "Go Your Own Way", "Songbird", "The Chain", "You Make Loving Fun", "I Don't Want to Know", "Oh Daddy", "Gold Dust Woman"]
+        },
+        {
+            "name": "Aja",
+            "artist": "Steely Dan",
+            "year": 1977,
+            "genres": ["Jazz Rock", "Rock"],
+            "cover": "https://e.snmc.io/i/600/w/789aa0f3e0117c3c9f76107d70297626/12182517/steely-dan-aja-Cover-Art.jpg",
+            "tracklist": ["Black Cow", "Aja", "Deacon Blues", "Peg", "Home at Last", "I Got the News", "Josie"]
+        }, 
+        {
+            "name": "Marquee Moon",
+            "artist": "Television",
+            "year": 1977,
+            "genres": ["Rock", "Art Punk"],
+            "cover": "https://e.snmc.io/i/600/w/692c17be71ef707b2cf284803d3f2255/7659700/television-marquee-moon-Cover-Art.jpg",
+            "tracklist": ["See No Evil", "Venus", "Friction", "Marquee Moon", "Elevation", "Guiding Light", "Prove It", "Torn Curtain"]
+        },
+        {
+            "name": "Discovery",
+            "artist": "Daft Punk",
+            "year": 2001,
+            "genres": ["Electronic", "French House"],
+            "cover": "https://e.snmc.io/i/600/w/66e4043ae2a7560546cf574d2060b5db/10377265/daft-punk-discovery-Cover-Art.jpg",
+            "tracklist": ["One More Time", "Aerodynamic", "Digital Love", "Harder, Better, Faster, Stronger", "Crescendolls", "Nightvision", "Superheroes", "High Life", "Something About Us", "Voyager", "Veridis Quo", "Short Circuit", "Face to Face", "Too Long"]
+        },
+        {
+            "name": "Is This It",
+            "artist": "The Strokes",
+            "year": 2001,
+            "genres": ["Rock", "Indie Rock", "Garage Rock Revival"],
+            "cover": "https://i.scdn.co/image/ab67616d0000b27313f2466b83507515291acce4",
+            "tracklist": ["Is This It", "The Modern Age", "Soma", "Barely Legal", "Someday", "Alone, Together", "Last Nite", "Hard to Explain", "New York City Cops", "Trying Your Luck", "Take It or Leave it"]
+        },
+        {
+            "name": "Lift Your Skinny Fists Like Antennas to Heaven",
+            "artist": "Godspeed You! Black Emperor",
+            "year": 2000,
+            "genres": ["Rock", "Post-Rock"],
+            "cover": "https://e.snmc.io/i/600/w/6f600382625979469fb340eeb3c9ac8a/5662600/godspeed-you-black-emperor-lift-yr-skinny-fists-like-antennas-to-heaven-Cover-Art.jpg",
+            "tracklist": ["Storm", "Static", "Sleep", "Like Antennas To Heaven..."]
+        },
+        {
+            "name": "Remain in Light",
+            "artist": "Talking Heads",
+            "year": 1980,
+            "genres": ["Rock", "New Wave", "Post-Punk"],
+            "cover": "https://e.snmc.io/i/600/w/a76d8d436ab1f9c3a0478cf40e2cad83/5627825/talking-heads-remain-in-light-Cover-Art.jpg",
+            "tracklist": ["Born Under Punches (The Heat Goes On)", "Crosseyed and Painless", "The Great Curve", "Once in a Lifetime", "Houses in Motion", "Seen and Not Seen", "Listening Wind", "The Overload"]
+        }
+    ]
+}
