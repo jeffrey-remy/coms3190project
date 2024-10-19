@@ -24,6 +24,34 @@
     </div>
 
     <!--Short section/div for search bar and buttons-->
+    <nav class="navbar bg-body-secondary navbar-expand-lg">
+        <div class="container-fluid">
+            <form class="d-flex" role="search">
+                <div class="input-group container">
+                    <input class="form-control me-2 w-100" type="search" placeholder="Search for album or artist name">
+                    <button class="btn btn-outline-success my-2 mr-sm-2 my-sm-0" type="submit">Search</button>
+                </div>
+            </form>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Genre
+                    </a>
+                    <ul class="dropdown-menu" id="genre-selector">
+                        <!--Filled in by catalog.js-->
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">About Us</a>
+                  </li>
+                </ul>
+
+              </div>
+            </div>
+        </div>  
+    </nav>
+    
 
     <!--Automatically generated cards with album info-->
     <div class="album py-5">
