@@ -142,10 +142,10 @@ function loadAlbums(albums, genre, query, artist, year, sort) {
         albumCard.innerHTML = `
             <div class="card">
                 <div class="embed-responsive embed-responsive-1by1">
-                    <a href="./album_detail.html" onclick="loadAlbumDetailsPage('${title}')"><img class="card-img-top embed-responsive-item" src="${cover}" alt="Album cover of ${title}"></a>
+                    <a href="#" onclick="loadAlbumDetailsPage('${title}')"><img class="card-img-top embed-responsive-item" src="${cover}" alt="Album cover of ${title}"></a>
                 </div>
                 <div class="card-body">
-                    <a href="./album_detail.html" style="text-decoration: none;" onclick="loadAlbumDetailsPage('${title}')"><h5 class="card-title">${title}</h5></a>
+                    <a href="#" style="text-decoration: none;" onclick="loadAlbumDetailsPage('${title}')"><h5 class="card-title">${title}</h5></a>
                     <a class="card-text" href="#" style="text-decoration: none;" onclick="displayAlbumsByArtist('${artist}')">${artist}</a>
                     <p class="card-text"><a class="text-muted" href="#" style="text-decoration: none;" onclick="displayAlbumsByExactYear(${year})">${year}</a></p>
                 </div>
@@ -305,7 +305,12 @@ function loadAlbumDetailsPage(title) {
             }
             // set index into localStorage, to be retrieved in album_detail.js
             localStorage.setItem("albumDetails", index);
-            // window.location.replace("http://127.0.0.1:5500/album_detail.html");
+            console.log(localStorage.getItem("albumDetails"));
+
+            // then load album_detail.html
+            let albumDetailUrl = window.location.href.replace("catalog.html", "album_detail.html");
+            console.log(albumDetailUrl);
+            window.location.replace(albumDetailUrl);
         })
         .catch(err => console.log("Error: " + err));
 }

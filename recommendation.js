@@ -76,7 +76,12 @@ function loadAlbumDetailsPage(title) {
             }
             // set index into localStorage, to be retrieved in album_detail.js
             localStorage.setItem("albumDetails", index);
-            window.location.replace("http://127.0.0.1:5500/album_detail.html");
+            console.log(localStorage.getItem("albumDetails"));
+
+            // then load album_detail.html
+            let albumDetailUrl = window.location.href.replace("catalog.html", "album_detail.html");
+            console.log(albumDetailUrl);
+            window.location.replace(albumDetailUrl);
         })
         .catch(err => console.log("Error: " + err));
 }
