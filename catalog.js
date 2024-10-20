@@ -145,7 +145,7 @@ function loadAlbums(albums, genre, query, artist, year, sort) {
                     <a href="#" onclick="loadAlbumDetailsPage('catalog.html', '${title}')"><img class="card-img-top embed-responsive-item" src="${cover}" alt="Album cover of ${title}"></a>
                 </div>
                 <div class="card-body">
-                    <a href="#" style="text-decoration: none;" onclick="loadAlbumDetailsPage('catalog.html', '${title}')"><h5 class="card-title">${title}</h5></a>
+                    <a href="#" style="text-decoration: none;" onclick="loadAlbumDetailsPage('catalog.html', '${title}')"><h5 class="card-title text-truncate">${title}</h5></a>
                     <a class="card-text" href="#" style="text-decoration: none;" onclick="displayAlbumsByArtist('${artist}')">${artist}</a>
                     <p class="card-text"><a class="text-muted" href="#" style="text-decoration: none;" onclick="displayAlbumsByExactYear(${year})">${year}</a></p>
                 </div>
