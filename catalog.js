@@ -7,7 +7,7 @@ function loadAlbums(albums, genre, query, artist, year, sort) {
     // use genreCounts to construct genre options for genre filter dropdown
     let genreDropdown = document.getElementById("genre-selector");
     genreDropdown.innerHTML = `
-        <li><a class="dropdown-item" href="#" onclick="displayAlbumsDefault()">All Genres</a></li>
+        <li><a class="dropdown-item" href="#" onclick="displayAlbumsWithoutGenre()">All Genres</a></li>
         <li><hr class="dropdown-divider"></li>
     `;
     for (let genrePair of genreCounts) {
@@ -25,8 +25,12 @@ function loadAlbums(albums, genre, query, artist, year, sort) {
     // update catalog page to reflect current genre being browsed
     let pageName = document.getElementById("catalog-page-name");
     // default title
-    let browsingTitleString = "All Albums";
     pageName.innerHTML = `<h2>All Albums</h2>`;
+
+    // genre dropdown element; update if user selects a genre
+    let genreDropdownTop = document.getElementById("genre-selector-top");
+    // default genre selection
+    genreDropdownTop.innerHTML = "Genre";
 
     // if sort is 3 (sorting by artist names alphabetically) then we do not want to filter by artist
     if (sort === 3) {
@@ -43,8 +47,10 @@ function loadAlbums(albums, genre, query, artist, year, sort) {
         }
 
         // update genre being browsed at top of page
-        browsingTitleString = `All ${genre} Albums`;
         pageName.innerHTML = `<h2>All ${genre} Albums</h2>`;
+
+        // update dropdown selection
+        genreDropdownTop.innerHTML = genre;
     }
     // if query is nonempty, filter albums by the given query
     else if (query) {
@@ -56,7 +62,6 @@ function loadAlbums(albums, genre, query, artist, year, sort) {
         }
 
         // update page to reflect search
-        browsingTitleString = `Results For "${query}"`;
         pageName.innerHTML = `<h2>Results For "${query}"</h2>`
     }
     // if artist is nonempty, filter albums by the given artist
@@ -97,7 +102,6 @@ function loadAlbums(albums, genre, query, artist, year, sort) {
         filteredAlbums = filteredAlbums.sort((a, b) => a.year - b.year);
         // update dropdown
         sortDropdownTop.innerHTML = "Oldest To Newest";
-        pageName.innerHTML = `<h2>Oldest To Newest</h2>` 
     }
     else if (sort === 1) {
         // reverse chronological order
@@ -116,6 +120,9 @@ function loadAlbums(albums, genre, query, artist, year, sort) {
         filteredAlbums = filteredAlbums.sort((a, b) => (a.artist > b.artist) ? 1 : (a.artist < b.artist) ? -1 : 0);
         // update dropdown
         sortDropdownTop.innerHTML = "Artist: A-Z";
+    }
+    else {
+        sortDropdownTop.innerHTML = "Sort";
     }
 
     var albumCatalog = document.getElementById("album-catalog");
@@ -178,47 +185,44 @@ function countGenres(albums) {
     return sortedMap;
 }
 
-function displayAlbumsDefault() {
-    currentArtist = "";
+function clearQuery() {
+    currentQuery = "";
+    // clear search query box
+    let searchBox = document.getElementById("catalog-search");
+    searchBox.value = "";
+}
+
+function resetFilters() {
     currentGenre = "";
+    currentArtist = "";
+    currentYear = 0;
     currentSort = -1;
+    clearQuery();
+}
 
-    let sortDropdownTop = document.getElementById("sort-selector-top");
-    if (sortDropdownTop !== null) 
-        sortDropdownTop.innerHTML = "Sort";
-
-    let genreDropdownTop = document.getElementById("genre-selector-top");
-    if (genreDropdownTop !== null) 
-        genreDropdownTop.innerHTML = "Genre";
-
-    fetch("./data.json")
-        .then(response => response.json())
-        .then(albums => loadAlbums(albums, "", "", "", 0, -1))
-        .catch(err => console.log("Error: " + err)); 
+function displayAlbumsDefault() {
+    resetFilters();
+    displayAlbums();
 }
 
 // load all albums matching a specified genre
 function displayAlbumsByGenre(genre) {
-    // update dropdown element
-    let genreDropdownTop = document.getElementById("genre-selector-top");
-    genreDropdownTop.innerHTML = genre;
-
     currentGenre = genre;
     currentArtist = "";
-    fetch("./data.json")
-        .then(response => response.json())
-        .then(albums => loadAlbums(albums, genre, "", "", 0, currentSort))
-        .catch(err => console.log("Error: " + err)); 
+    currentYear = 0;
+    clearQuery();
+
+    displayAlbums();
 }
 
 // load all albums by a specific artist 
 function displayAlbumsByArtist(artist) {
     currentArtist = artist;
     currentGenre = "";
-    fetch("./data.json")
-        .then(response => response.json())
-        .then(albums => loadAlbums(albums, "", "", artist, 0, currentSort))
-        .catch(err => console.log("Error: " + err)); 
+    currentYear = 0;
+    clearQuery();
+
+    displayAlbums();
 }
 
 // load all albums with title or artist name matching a search query
@@ -226,22 +230,16 @@ function displayAlbumsBySearch() {
     // if submitted query is empty, ignore it (so we don't waste resources reloading page)
     let query = document.getElementById("catalog-search").value.toLowerCase();
     if (query) {
-        currentArtist = "";
+        // clear all other filters
         currentGenre = "";
-
-        let sortDropdownTop = document.getElementById("sort-selector-top");
-        if (sortDropdownTop !== null) 
-            sortDropdownTop.innerHTML = "Sort";
-    
-        let genreDropdownTop = document.getElementById("genre-selector-top");
-        if (genreDropdownTop !== null) 
-            genreDropdownTop.innerHTML = "Genre";
-
+        currentYear = 0;
+        currentArtist = "";
         currentSort = -1;
-        fetch("./data.json")
-            .then(response => response.json())
-            .then(albums => loadAlbums(albums, "", query, "", 0, -1))
-            .catch(err => console.log("Error: " + err)); 
+
+        // update current query
+        currentQuery = query;
+
+        displayAlbums();
     }
 }
 
@@ -249,34 +247,53 @@ function displayAlbumsBySearch() {
 function displayAlbumsByExactYear(year) {
     currentArtist = "";
     currentGenre = "";
-    fetch("./data.json")
-        .then(response => response.json())
-        .then(albums => loadAlbums(albums, "", "", "", year, -1))
-        .catch(err => console.log("Error: " + err)); 
+    currentYear = year;
+    clearQuery();
+
+    displayAlbums();
 }
 
 // load all albums in a specific order
 function displayAlbumsBySort(sort) {
-    let genre = "";
-    let artist = "";
     currentSort = sort;
+    clearQuery();
 
-    // if user is already browsing a specific genre or artist, keep that as well
-    if (currentGenre) {
-        genre = currentGenre;
-    }
-    else if (currentArtist) {
-        artist = currentArtist;
-    }
-    fetch("./data.json")
-        .then(response => response.json())
-        .then(albums => loadAlbums(albums, currentGenre, "", currentArtist, 0, sort))
-        .catch(err => console.log("Error: " + err)); 
+    displayAlbums();
 }
 
-// keep track of what type of catalog user is currently browsing
+// remove genre from browsing filters
+function displayAlbumsWithoutGenre() {
+    // go back to default browsing, except for sort
+    currentGenre = "";
+    currentYear = 0;
+    currentArtist = "";
+    clearQuery();
+
+    displayAlbums();
+}
+
+// remove sort from browsing filters
+function displayAlbumsWithoutSort() {
+    // update sort back to default, leave everything else as is
+    currentSort = -1;
+    clearQuery();
+
+    displayAlbums();
+}
+
+// update album catalog page based on currently selected filters by user
+function displayAlbums() {
+    fetch("./data.json")
+        .then(response => response.json())
+        .then(albums => loadAlbums(albums, currentGenre, currentQuery, currentArtist, currentYear, currentSort))
+        .catch(err => console.log("Error: " + err));
+}
+
+// keep track of attributes/filter user is currently browsing with
 let currentGenre = "";
+let currentQuery = "";
 let currentArtist = "";
+let currentYear = 0;
 let currentSort = -1;
 
 displayAlbumsDefault();
