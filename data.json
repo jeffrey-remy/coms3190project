@@ -84,18 +84,21 @@
     "recommendations": [
         {
             "albumName": "Abbey Road",
-            "review": "",
-            "rating": 5
+            "review": "The last album they would record together, The Beatles manage to combine all of their songwriting efforts on Abbey Road to create their apotheosis. Flowing between bluesy grooves, majestic love songs, and silly rockers, The Beatles showcase every single aspect of what made them so special. Assisted by terrific production, the instrumental work of each Beatle provides amazing backdrops to the memorable vocal performances throughout. A must listen for not just fans of rock music, but for every music listener out there.",
+            "rating": 5,
+            "active": true
         },
         {
             "albumName": "Discovery",
             "review": "",
-            "rating": 4.5
+            "rating": 4.5,
+            "active": false
         },
         {
             "albumName": "Lift Your Skinny Fists Like Antennas to Heaven",
             "review": "",
-            "rating": 4.5
+            "rating": 4.5,
+            "active": false
         }
     ]
 }
