@@ -28,29 +28,40 @@
         <div class="container-fluid">
             <form class="d-flex" role="search">
                 <div class="input-group container">
-                    <input class="form-control me-2 w-100" type="search" placeholder="Search for album or artist name">
-                    <button class="btn btn-outline-success my-2 mr-sm-2 my-sm-0" type="submit">Search</button>
+                    <input id="catalog-search" class="form-control me-2 w-100" type="search" placeholder="Search for album or artist name">
+                    <button class="btn btn-outline-success my-2 mr-sm-2 my-sm-0" type="submit" onclick="displayAlbumsBySearch()">Search</button>
                 </div>
             </form>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Genre
-                    </a>
-                    <ul class="dropdown-menu" id="genre-selector">
-                        <!--Filled in by catalog.js-->
-                    </ul>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">About Us</a>
-                  </li>
+                    <li class="nav-item dropdown">
+                        <a id="genre-selector-top" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Genre</a>
+                        <ul class="dropdown-menu" id="genre-selector">
+                            <!--Filled in by catalog.js-->
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a id="sort-selector-top" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Sort</a>
+                        <ul class="dropdown-menu" id="sort-selector">
+                            <li><a class="dropdown-item" href="#" onclick="displayAlbumsDefault()">Clear Sort</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#" onclick="displayAlbumsBySort(0)">Oldest to Newest</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="displayAlbumsBySort(1)">Newest to Oldest</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="displayAlbumsBySort(2)">Title: A-Z</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="displayAlbumsBySort(3)">Artist: A-Z</a></li>
+                        </ul>
+                    </li>
                 </ul>
 
               </div>
             </div>
         </div>  
     </nav>
+
+    <!--Changes to reflect what albums the user is browsing-->
+    <div class="container" id="catalog-page-name">
+        <h2>All Albums</h2>
+    </div>
     
 
     <!--Automatically generated cards with album info-->
