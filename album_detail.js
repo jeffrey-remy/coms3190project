@@ -1,27 +1,56 @@
+
+let id = 3;
+
+function populate(json) {
+  let tracklistHtml = json.albums[id].tracklist.map(track => `<li>${track}</li>`).join("");
+  document.getElementById("album").innerHTML = `
+    <div class="container mt-4">
+      <div class="row justify-content-center d-flex align-items-stretch">
+        <!-- Album details and image column -->
+        <div class="col-md-6">
+          <div class="card mb-4" style="width: 100%;">
+            <img src="${json.albums[id].cover}" alt="${json.albums[id].name} Cover" class="card-img-top"/>
+          </div>
+          <div class="card" style="width: 100%;">
+            <div class="card-body">
+              <p><strong>Name:</strong> ${json.albums[id].name}</p>
+              <p><strong>Artist:</strong> ${json.albums[id].artist}</p>
+              <p><strong>Released:</strong> ${json.albums[id].year}</p>
+              <p><strong>Genres:</strong> ${json.albums[id].genres.join(', ')}</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tracklist column -->
+        <div class="col-md-4">
+          <div class="card" style="width: 100%;">
+            <div class="card-body">
+              <h3>Track List</h3>
+              <ul>
+                ${tracklistHtml}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+
 function fetchUser() {
-    document.getElementById("loginuser").innerHTML = `Authenticating...`;
-    return new Promise((resolve, reject) => {
-      fetch("./07_2_31_Challenge_fetchuser_login_Async_Await.json")
-      .then((response)=>{return response.json()})
-      .then((data)=>{resolve(data)})
-      .catch((error)=>{console.log(error)})
-    });
-  }
-  function login(users, userInput, passwordInput) {
-      //check user and password with users json
-      if(users.user === userInput && users.password === passwordInput){
-          document.getElementById("loginuser").innerHTML = "correct";
-      }else {
-          document.getElementById("loginuser").innerHTML = "false";
-      }
-  }
-  async function useAdmin(userInput, passwordInput) {
-      let users = await fetchUser();
-      login(users,userInput,passwordInput);
-  }
-  document.getElementById("loginButton").addEventListener("click", (event) => {
-    event.preventDefault();
-    const userInput = document.getElementById("userInput").value;
-    const passwordInput = document.getElementById("passwordInput").value;
-    useAdmin(userInput,passwordInput);
+  return new Promise((resolve, reject) => {
+    fetch("./data.json")
+      .then((response) => response.json())
+      .then((data) => {
+        populate(data);
+        resolve(data);
+      })
+      .catch((error) => {
+        console.log(error);
+        reject(error);
+      });
   });
+}
+
+fetchUser();
