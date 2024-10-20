@@ -142,10 +142,10 @@ function loadAlbums(albums, genre, query, artist, year, sort) {
         albumCard.innerHTML = `
             <div class="card">
                 <div class="embed-responsive embed-responsive-1by1">
-                    <a href="album_detail.html" onclick="loadAlbumDetailsPage('${title}')"><img class="card-img-top embed-responsive-item" src="${cover}" alt="Album cover of ${title}"></a>
+                    <a href="./album_detail.html" onclick="loadAlbumDetailsPage('${title}')"><img class="card-img-top embed-responsive-item" src="${cover}" alt="Album cover of ${title}"></a>
                 </div>
                 <div class="card-body">
-                    <a href="" style="text-decoration: none;" onclick="loadAlbumDetailsPage('${title}')"><h5 class="card-title">${title}</h5></a>
+                    <a href="./album_detail.html" style="text-decoration: none;" onclick="loadAlbumDetailsPage('${title}')"><h5 class="card-title">${title}</h5></a>
                     <a class="card-text" href="#" style="text-decoration: none;" onclick="displayAlbumsByArtist('${artist}')">${artist}</a>
                     <p class="card-text"><a class="text-muted" href="#" style="text-decoration: none;" onclick="displayAlbumsByExactYear(${year})">${year}</a></p>
                 </div>
