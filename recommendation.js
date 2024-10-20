@@ -48,7 +48,7 @@ function displayRecommendation(albums) {
     let recommendationTextItem = document.createElement("div"); 
     recommendationTextItem.innerHTML = `
         <div class="container">
-            <h2><a href="#" onclick="loadAlbumDetailsPage('${title}')" style="text-decoration: none;">${title}</a></h2>
+            <h2><a href="#" onclick="loadAlbumDetailsPage('recommendation.html', '${title}')" style="text-decoration: none;">${title}</a></h2>
             <h4>by ${artist}</h4>
             <h6>${year}</h6>
             <h6>${genres.join(', ')}</h6>
@@ -61,7 +61,7 @@ function displayRecommendation(albums) {
 }
 
 // if user clicks on a specific album, load the album detail page with that album
-function loadAlbumDetailsPage(title) {
+function loadAlbumDetailsPage(incomingPage, title) {
     // get index of selected album in data.json
     fetch("./data.json")
         .then(response => response.json())
@@ -79,7 +79,7 @@ function loadAlbumDetailsPage(title) {
             console.log(localStorage.getItem("albumDetails"));
 
             // then load album_detail.html
-            let albumDetailUrl = window.location.href.replace("catalog.html", "album_detail.html");
+            let albumDetailUrl = window.location.href.replace(incomingPage, "album_detail.html");
             console.log(albumDetailUrl);
             window.location.replace(albumDetailUrl);
         })

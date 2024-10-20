@@ -14,6 +14,9 @@
             height: 100%;
             object-fit: fill;
         }
+        #browse-title {
+            background-color: transparent;
+        }
     </style>
 
 </head>
@@ -21,12 +24,12 @@
     <script src="NavBar.js"></script>
     <div id="navbar"></div>
 
-    <div class="container bg-body-tertiary">
-        <h1>Browse All Albums</h1>
+    <div class="d-flex justify-content-center container-fluid bg-body-secondary">
+        <h1 id="browse-title">Browse All Albums</h1>
     </div>
 
     <!--Short section/div for search bar and buttons-->
-    <nav class="navbar bg-body-secondary navbar-expand-lg navbar-expand-md">
+    <nav class="bg-body-tertiary navbar navbar-expand-lg navbar-expand-md">
         <div class="container">
             <div class="input-group container">
                 <input id="catalog-search" class="form-control me-2" type="search" placeholder="Search for album or artist name">

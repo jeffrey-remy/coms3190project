@@ -36,7 +36,7 @@ function addAlbumsToCarousel(albums) {
         let carouselItem = document.createElement("div");
         carouselItem.innerHTML = `
             <div class="carousel-item ${active}">
-                <a href ="#" onclick="loadAlbumDetailsPage('${title}')">
+                <a href ="#" onclick="loadAlbumDetailsPage('index.html', '${title}')">
                     <img class="d-block w-100" src="${cover}" alt="First slide">
                     <div style="background-color: rgba(0, 0, 0, 0.5);" class="carousel-caption d-none d-md-block">
                         <h4>${title}</h4>
@@ -49,17 +49,8 @@ function addAlbumsToCarousel(albums) {
     }
 }
 
-// add random albums from data.json to the carousel on the home page 
-function populateCarousel() {
-    fetch("data.json")
-        .then(response => response.json())
-        .then(albums => addAlbumsToCarousel(albums))
-        .catch(err => console.log("Error: " + err));
-}
-
-
 // if user clicks on a specific album, load the album detail page with that album
-function loadAlbumDetailsPage(title) {
+function loadAlbumDetailsPage(incomingPage, title) {
     // get index of selected album in data.json
     fetch("./data.json")
         .then(response => response.json())
@@ -77,10 +68,18 @@ function loadAlbumDetailsPage(title) {
             console.log(localStorage.getItem("albumDetails"));
 
             // then load album_detail.html
-            let albumDetailUrl = window.location.href.replace("catalog.html", "album_detail.html");
+            let albumDetailUrl = window.location.href.replace(incomingPage, "album_detail.html");
             console.log(albumDetailUrl);
             window.location.replace(albumDetailUrl);
         })
+        .catch(err => console.log("Error: " + err));
+}
+
+// add random albums from data.json to the carousel on the home page 
+function populateCarousel() {
+    fetch("data.json")
+        .then(response => response.json())
+        .then(albums => addAlbumsToCarousel(albums))
         .catch(err => console.log("Error: " + err));
 }
 
