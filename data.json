@@ -80,5 +80,22 @@
             "cover": "https://e.snmc.io/i/600/w/a76d8d436ab1f9c3a0478cf40e2cad83/5627825/talking-heads-remain-in-light-Cover-Art.jpg",
             "tracklist": ["Born Under Punches (The Heat Goes On)", "Crosseyed and Painless", "The Great Curve", "Once in a Lifetime", "Houses in Motion", "Seen and Not Seen", "Listening Wind", "The Overload"]
         }
+    ], 
+    "recommendations": [
+        {
+            "albumName": "Abbey Road",
+            "review": "",
+            "rating": 5
+        },
+        {
+            "albumName": "Discovery",
+            "review": "",
+            "rating": 4.5
+        },
+        {
+            "albumName": "Lift Your Skinny Fists Like Antennas to Heaven",
+            "review": "",
+            "rating": 4.5
+        }
     ]
 }

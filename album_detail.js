@@ -1,5 +1,5 @@
 
-let id = 3;
+let id;
 
 function populate(json) {
   let tracklistHtml = json.albums[id].tracklist.map(track => `<li>${track}</li>`).join("");
@@ -39,6 +39,7 @@ function populate(json) {
 
 
 function fetchUser() {
+  id = localStorage.getItem("albumDetails");
   return new Promise((resolve, reject) => {
     fetch("./data.json")
       .then((response) => response.json())

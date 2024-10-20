@@ -142,10 +142,10 @@ function loadAlbums(albums, genre, query, artist, year, sort) {
         albumCard.innerHTML = `
             <div class="card">
                 <div class="embed-responsive embed-responsive-1by1">
-                    <img class="card-img-top embed-responsive-item" src="${cover}" alt="Album cover of ${title}">
+                    <a href="#" onclick="loadAlbumDetailsPage('${title}')"><img class="card-img-top embed-responsive-item" src="${cover}" alt="Album cover of ${title}"></a>
                 </div>
                 <div class="card-body">
-                    <h5 class="card-title">${title}</h5>
+                    <a href="#" style="text-decoration: none;" onclick="loadAlbumDetailsPage('${title}')"><h5 class="card-title">${title}</h5></a>
                     <a class="card-text" href="#" style="text-decoration: none;" onclick="displayAlbumsByArtist('${artist}')">${artist}</a>
                     <p class="card-text"><a class="text-muted" href="#" style="text-decoration: none;" onclick="displayAlbumsByExactYear(${year})">${year}</a></p>
                 </div>
@@ -288,6 +288,29 @@ function displayAlbums() {
         .then(albums => loadAlbums(albums, currentGenre, currentQuery, currentArtist, currentYear, currentSort))
         .catch(err => console.log("Error: " + err));
 }
+
+// if user clicks on a specific album, load the album detail page with that album
+function loadAlbumDetailsPage(title) {
+    // get index of selected album in data.json
+    fetch("./data.json")
+        .then(response => response.json())
+        .then(albums => {
+            let arrayAlbums = albums.albums;
+            let index = 0;
+            for (let i = 0; i < arrayAlbums.length; i++) {
+                // if album title matches the specified title, this is the right index
+                if (arrayAlbums[i].name === title) {
+                    index = i;
+                }
+            }
+            // set index into localStorage, to be retrieved in album_detail.js
+            localStorage.setItem("albumDetails", index);
+            window.location.replace("http://127.0.0.1:5500/album_detail.html");
+        })
+        .catch(err => console.log("Error: " + err));
+}
+
+localStorage.setItem("albumDetails", -1);
 
 // keep track of attributes/filter user is currently browsing with
 let currentGenre = "";
