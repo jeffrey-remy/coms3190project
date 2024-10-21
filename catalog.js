@@ -305,11 +305,9 @@ function loadAlbumDetailsPage(incomingPage, title) {
             }
             // set index into localStorage, to be retrieved in album_detail.js
             localStorage.setItem("albumDetails", index);
-            console.log(localStorage.getItem("albumDetails"));
 
             // then load album_detail.html
             let albumDetailUrl = window.location.href.replace(incomingPage, "album_detail.html");
-            console.log(albumDetailUrl);
             window.location.replace(albumDetailUrl);
         })
         .catch(err => console.log("Error: " + err));
