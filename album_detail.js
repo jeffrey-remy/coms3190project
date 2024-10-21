@@ -2,7 +2,7 @@
 let id;
 
 function populate(json) {
-  id = localStorage.getItem("albumDetails");
+  setTimeout(3000);
   let tracklistHtml = json.albums[id].tracklist.map(track => `<li>${track}</li>`).join("");
   document.getElementById("album").innerHTML = `
     <div class="container mt-4">
@@ -45,8 +45,9 @@ function fetchUser() {
     fetch("./data.json")
       .then((response) => response.json())
       .then((data) => {
-        populate(data);
         resolve(data);
+        id = localStorage.getItem("albumDetails");
+        populate(data);
       })
       .catch((error) => {
         console.log(error);
