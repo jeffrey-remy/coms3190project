@@ -27,9 +27,9 @@ function populate(json) {
           <div class="card" style="width: 100%;">
             <div class="card-body">
               <h3>Track List</h3>
-              <ul>
+              <ol>
                 ${tracklistHtml}
-              </ul>
+              </ol>
             </div>
           </div>
         </div>
