@@ -14,10 +14,10 @@ function populate(json) {
           </div>
           <div class="card" style="width: 100%;">
             <div class="card-body">
-              <p><strong>Name:</strong> ${json.albums[id].name}</p>
-              <p><strong>Artist:</strong> ${json.albums[id].artist}</p>
-              <p><strong>Released:</strong> ${json.albums[id].year}</p>
-              <p><strong>Genres:</strong> ${json.albums[id].genres.join(', ')}</p>
+              <p><strong style="color: rgb(200,16,46);">Name:</strong> ${json.albums[id].name}</p>
+              <p><strong style="color: rgb(200,16,46);">Artist:</strong> ${json.albums[id].artist}</p>
+              <p><strong style="color: rgb(200,16,46);">Released:</strong> ${json.albums[id].year}</p>
+              <p><strong style="color: rgb(200,16,46);">Genres:</strong> ${json.albums[id].genres.join(', ')}</p>
             </div>
           </div>
         </div>
@@ -26,7 +26,7 @@ function populate(json) {
         <div class="col-md-4">
           <div class="card" style="width: 100%;">
             <div class="card-body">
-              <h3>Track List</h3>
+              <h3 style="color: rgb(200,16,46);">Track List</h3>
               <ol>
                 ${tracklistHtml}
               </ol>
