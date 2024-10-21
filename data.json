@@ -5,7 +5,7 @@
             "artist": "The Beatles",
             "year": 1969,
             "genres": ["Rock", "Pop", "Pop Rock"],
-            "cover": "https://e.snmc.io/i/600/w/b7d49832f4958688cd82b6dbb9f4dd31/12188855/the-beatles-abbey-road-Cover-Art.jpg",
+            "cover": "./images/abbeyroad.jpeg",
             "tracklist": ["Come Together", "Something", "Maxwell's Silver Hammer", "Oh! Darling", "Octopus's Garden", "I Want You (She's So Heavy)", "Here Comes the Sun", "Because", "You Never Give Me Your Money", "Sun King", "Mean Mr. Mustard", "Polythene Pam", "She Came In Through The Bathroom Window", "Golden Slumbers", "Carry That Weight", "The End", "Her Majesty"]
         },
         {
@@ -13,7 +13,7 @@
             "artist": "Pink Floyd",
             "year": 1973,
             "genres": ["Rock", "Progressive Rock"],
-            "cover": "https://e.snmc.io/i/600/w/b87ea178beaaaf0e0e4a39aaf9d1b834/12206378/pink-floyd-the-dark-side-of-the-moon-Cover-Art.jpg",
+            "cover": "./images/thedarksideofthemoon.png",
             "tracklist": ["Speak To Me", "Breathe", "On the Run", "Time", "The Great Gig in the Sky", "Money", "Us and Them", "Any Colour You Like", "Brain Damage", "Eclipse"]
         },
         {
@@ -21,7 +21,7 @@
             "artist": "Pink Floyd",
             "year": 1975,
             "genres": ["Rock", "Progressive Rock"],
-            "cover": "https://e.snmc.io/i/600/w/439b9503e9599050fda01d8eef4f8097/4184635/pink-floyd-wish-you-were-here-Cover-Art.png",
+            "cover": "./images/wishyouwerehere.jpeg",
             "tracklist": ["Shine On You Crazy Diamond (Parts I-V)", "Welcome to the Machine", "Have a Cigar", "Wish You Were Here", "Shine On You Crazy Diamond (Parts VI-IX)"]
         },
         {
@@ -29,7 +29,7 @@
             "artist": "Fleetwood Mac",
             "year": 1977,
             "genres": ["Rock", "Pop Rock"],
-            "cover": "https://upload.wikimedia.org/wikipedia/en/f/fb/FMacRumours.PNG",
+            "cover": "./images/rumours.jpg",
             "tracklist": ["Second Hand News", "Dreams", "Never Going Back Again", "Don't Stop", "Go Your Own Way", "Songbird", "The Chain", "You Make Loving Fun", "I Don't Want to Know", "Oh Daddy", "Gold Dust Woman"]
         },
         {
@@ -37,7 +37,7 @@
             "artist": "Steely Dan",
             "year": 1977,
             "genres": ["Jazz Rock", "Rock"],
-            "cover": "https://e.snmc.io/i/600/w/789aa0f3e0117c3c9f76107d70297626/12182517/steely-dan-aja-Cover-Art.jpg",
+            "cover": "./images/aja.jpg",
             "tracklist": ["Black Cow", "Aja", "Deacon Blues", "Peg", "Home at Last", "I Got the News", "Josie"]
         }, 
         {
@@ -45,7 +45,7 @@
             "artist": "Godspeed You! Black Emperor",
             "year": 2000,
             "genres": ["Rock", "Post-Rock"],
-            "cover": "https://upload.wikimedia.org/wikipedia/en/d/d3/Liftyrskinnyfists.jpg",
+            "cover": "./images/liftyourskinnyfists.jpeg",
             "tracklist": ["Storm", "Static", "Sleep", "Like Antennas To Heaven..."]
         },
         {
@@ -53,7 +53,7 @@
             "artist": "Television",
             "year": 1977,
             "genres": ["Rock", "Art Punk"],
-            "cover": "https://e.snmc.io/i/600/w/692c17be71ef707b2cf284803d3f2255/7659700/television-marquee-moon-Cover-Art.jpg",
+            "cover": "./images/marqueemoon.jpeg",
             "tracklist": ["See No Evil", "Venus", "Friction", "Marquee Moon", "Elevation", "Guiding Light", "Prove It", "Torn Curtain"]
         },
         {
@@ -61,7 +61,7 @@
             "artist": "Daft Punk",
             "year": 2001,
             "genres": ["Electronic", "French House"],
-            "cover": "https://e.snmc.io/i/600/w/66e4043ae2a7560546cf574d2060b5db/10377265/daft-punk-discovery-Cover-Art.jpg",
+            "cover": "./images/discovery.jpg",
             "tracklist": ["One More Time", "Aerodynamic", "Digital Love", "Harder, Better, Faster, Stronger", "Crescendolls", "Nightvision", "Superheroes", "High Life", "Something About Us", "Voyager", "Veridis Quo", "Short Circuit", "Face to Face", "Too Long"]
         },
         {
@@ -69,7 +69,7 @@
             "artist": "The Strokes",
             "year": 2001,
             "genres": ["Rock", "Indie Rock", "Garage Rock Revival"],
-            "cover": "https://i.scdn.co/image/ab67616d0000b27313f2466b83507515291acce4",
+            "cover": "./images/isthisit.jpeg",
             "tracklist": ["Is This It", "The Modern Age", "Soma", "Barely Legal", "Someday", "Alone, Together", "Last Nite", "Hard to Explain", "New York City Cops", "Trying Your Luck", "Take It or Leave it"]
         },
         {
@@ -77,7 +77,7 @@
             "artist": "Talking Heads",
             "year": 1980,
             "genres": ["Rock", "New Wave", "Post-Punk"],
-            "cover": "https://e.snmc.io/i/600/w/a76d8d436ab1f9c3a0478cf40e2cad83/5627825/talking-heads-remain-in-light-Cover-Art.jpg",
+            "cover": "./images/remaininlight.jpeg",
             "tracklist": ["Born Under Punches (The Heat Goes On)", "Crosseyed and Painless", "The Great Curve", "Once in a Lifetime", "Houses in Motion", "Seen and Not Seen", "Listening Wind", "The Overload"]
         },
         {
@@ -85,7 +85,7 @@
             "artist": "Radiohead",
             "year": 1997,
             "genres": ["Rock", "Alternative Rock", "Art Rock"],
-            "cover": "https://e.snmc.io/i/600/w/91f41d53d83f36ac3bb0cee7d6dffca3/11993756/radiohead-ok-computer-Cover-Art.jpg",
+            "cover": "./images/okcomputer.jpeg",
             "tracklist": ["Airbag", "Paranoid Android", "Subterranean Homesick Alien", "Exit Music (For a Film)", "Let Down", "Karma Police", "Fitter Happier", "Electioneering", "Climbing Up the Walls", "No Surprises", "Lucky", "The Tourist"]
         },
         {
@@ -93,7 +93,7 @@
             "artist": "The Beatles",
             "year": 1967,
             "genres": ["Rock", "Pop", "Pop Rock", "Pyschedelic Pop"],
-            "cover": "https://e.snmc.io/i/600/w/bcd8e3842e6e6eb7c09c96a3ac80dc9d/10941490/the-beatles-sgt-peppers-lonely-hearts-club-band-Cover-Art.jpg",
+            "cover": "./images/sgtpepperslonelyheartsclubband.jpg",
             "tracklist": ["Sgt. Pepper's Lonely Hearts Club Band", "With a Little Help From My Friends", "Lucy in the Sky With Diamonds", "Getting Better", "Fixing a Hole", "She's Leaving Home", "Being for the Benefit of Mr. Kite!", "Within You Without You", "When I'm Sixty-Four", "Lovely Rita", "Good Morning Good Morning", "Sgt. Pepper's Lonely Hearts Club Band (Reprise)", "A Day in the Life"]
         },
         {
@@ -101,7 +101,7 @@
             "artist": "Michael Jackson", 
             "year": 1982,
             "genres": ["Pop", "Dance-Pop", "Contemporary R&B"],
-            "cover": "https://e.snmc.io/i/600/w/20403814ee1f8c4644a94e0e7e5cf47f/11486295/michael-jackson-thriller-Cover-Art.jpg",
+            "cover": "./images/thriller.jpeg",
             "tracklist": ["Wanna Be Startin' Somethin'", "Baby Be Mine", "The Girl Is Mine", "Thriller", "Beat It", "Billie Jean", "Human Nature", "P.Y.T. (Pretty Young Thing)", "The Lady in My Life"]
         },
         {
@@ -109,7 +109,7 @@
             "artist": "Led Zeppelin",
             "year": 1971,
             "genres": ["Rock", "Hard Rock"],
-            "cover": "https://e.snmc.io/i/600/w/533117ae93c212eb50f35ed7d654786b/5707164/led-zeppelin-led-zeppelin-iv-Cover-Art.jpg",
+            "cover": "./images/ledzeppeliniv.jpeg",
             "tracklist": ["Black Dog", "Rock and Roll", "The Battle of Evermore", "Stairway to Heaven", "Misty Mountain Hop", "Four Sticks", "Going to California", "When the Levee Breaks"]
         },
         {
@@ -117,7 +117,7 @@
             "artist": "Yes",
             "year": 1972,
             "genres": ["Rock", "Progressive Rock", "Symphonic Prog"],
-            "cover": "https://e.snmc.io/i/600/w/68e64cb7bbfcef015d8b41ae820dd5d7/11166648/yes-close-to-the-edge-Cover-Art.jpg",
+            "cover": "./images/closetotheedge.jpg",
             "tracklist": ["Close to the Edge (i. The Solid Time of Change, ii. Total Mass Retain, iii. I Get Up I Get Down, iv. Seasons of Man)", "And You and I", "Siberian Khatru"]
         },
         {
@@ -125,7 +125,7 @@
             "artist": "Massive Attack",
             "year": 1998,
             "genres": ["Trip Hop", "Electronic"],
-            "cover": "https://e.snmc.io/i/600/w/1d5fe7253c8c444526eda247c895456e/10956120/massive-attack-mezzanine-Cover-Art.jpg",
+            "cover": "./images/mezzanine.jpeg",
             "tracklist": ["Angel", "Risingon", "Teardrop", "Inertia Creeps", "Exchange", "Dissolved Girl", "Man Next Door", "Black Milk", "Mezzanine", "Group Four", "(Exchange)"]
         },
         {
@@ -133,7 +133,7 @@
             "artist": "David Bowie",
             "year": 1972,
             "genres": ["Rock", "Glam Rock", "Pop Rock"],
-            "cover": "https://e.snmc.io/i/600/w/5286b64a7026f2aa94e663215d2a95f6/8542182/david-bowie-the-rise-and-fall-of-ziggy-stardust-and-the-spiders-from-mars-Cover-Art.png",
+            "cover": "./images/ziggystardust.jpeg",
             "tracklist": ["Five Years", "Soul Love", "Moonage Daydream", "Starman", "It Ain't Easy", "Lady Stardust", "Star", "Hang On to Yourself", "Ziggy Stardust", "Suffragette City", "Rock 'n' Roll Suicide"]
         },
         {
@@ -141,7 +141,7 @@
             "artist": "David Bowie",
             "year": 1976,
             "genres": ["Rock", "Art Rock", "Funk Rock"],
-            "cover": "https://e.snmc.io/i/600/w/0afdcf01e3b4cceb7156ea3d1e050998/10744832/david-bowie-station-to-station-Cover-Art.jpg",
+            "cover": "./images/stationtostation.jpeg",
             "tracklist": ["Station to Station", "Golden Years", "Word on a Wing", "TVC-15", "Stay", "Wild Is the Wind"]
         },
         {
@@ -149,7 +149,7 @@
             "artist": "Fiona Apple",
             "year": 1999,
             "genres": ["Pop", "Singer-Songwriter", "Piano Rock", "Alternative Rock"],
-            "cover": "https://e.snmc.io/i/600/w/36a8a926b84c0ceba1de4d01837845f3/11666558/fiona-apple-when-the-pawn-Cover-Art.jpg",
+            "cover": "./images/whenthepawn.jpeg",
             "tracklist": ["On the Bound", "To Your Love", "Limp", "Love Ridden", "Paper Bag", "A Mistake", "Fast As You Can", "The Way Things Are", "Get Gone", "I Know"]
         },
         {
@@ -157,7 +157,7 @@
             "artist": "Fishmans", 
             "year": 1996,
             "genres": ["Neo-Psychadelia", "Pop", "Dream Pop", "Progressive Pop"],
-            "cover": "https://e.snmc.io/i/600/w/a5f3848fe30834a9f67abae16821da4a/10504082/fishmans-long-season-Cover-Art.jpg",
+            "cover": "./images/longseason.jpeg",
             "tracklist": ["LONG SEASON"]
         }
 
